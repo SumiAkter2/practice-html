@@ -36,5 +36,48 @@ nav ul li a{
     right: 5px;
     z-index: 5;
     cursor: pointer;
+    height: 30px;
+    width: 50px;
+    opacity: 0;
 
 }
+.hamburger-icon{
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ .line {
+    background: #000;
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    
+ }
+ .hamburger-icon .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.3s ease-in-out;
+  }
+
+ .hamburger-icon .line2 {
+      transition: transform 0.2s ease-in-out;
+  }
+ .hamburger-icon .line3 {
+     transform-origin: 0% 100%;
+     transition: transform 0.3s ease-in-out;
+ }
+ .hamburger input[type="checkbox"]:checked~ .hamburger-icon .line1{
+transform: rotate(45deg);
+ }
+ .hamburger input[type="checkbox"]:checked~ .hamburger-icon .line2{
+    transform: scaleY(0);
+ }
+ .hamburger input[type="checkbox"]:checked~ .hamburger-icon .line3{
+    transform: rotate(-45deg);
+ }
