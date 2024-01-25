@@ -31,41 +31,56 @@ body{
     margin-top: 50px;
     width: 320px;
     height: 350px;
+    overflow: hidden;
+   
 }
 .border{
     background: rgb(26, 123, 179);
     position: absolute;
+    transition: .7s ease-in-out;
+   
+}
+.border.bottom,.border.top{
+width: 315px;
+height: 10px;
+}
+.border.left,.border.right{
+width: 10px;
+height: 350px;
 }
 .border.top{
-   
     top: 0;
-    left: 5px;
-  
-    width: 315px;
-    height: 5px;
+    left: 100px;
 }
 .border.bottom {
-   
     bottom: 0;
-    left: 5px;
-    width: 315px;
-    height: 5px;
+    right: 100px;
 }
 .border.left {
-   
-    top: 0px;
+    top: 150px;
     left: 0;
-   
-    width: 5px;
-    height: 350px;
 }
 .border.right {
-   
-    top: 0px;
+    bottom: 150px;
     right: 0;
     
-    width: 5px;
-    height: 350px;
+}
+
+.image-section:hover .border.left{
+    top: 0px;
+    left: 0px;
+}
+.image-section:hover .border.right{
+    bottom: 0px;
+    right:  0px;
+}
+.image-section:hover .border.bottom{
+    bottom: 0;
+    right: 5px;
+}
+.image-section:hover .border.top{
+    top: 0;
+    left: 5px;
 }
 @keyframes typing-text {
     0%{
