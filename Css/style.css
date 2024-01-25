@@ -1,0 +1,158 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    margin:20px ;
+}
+.typing-title{
+    font-size: 55px;
+    color: transparent;
+    position: relative;
+}
+.typing-title::before{
+    content: 'Hello Rashed';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(26, 123, 179);
+    animation: typing-text 4s linear 2s infinite;   
+
+}
+
+.image-div img{
+    width: 320px;
+    height: 350px;
+    object-fit: cover;
+   
+}
+.image-section{
+    position: relative;
+    margin-top: 50px;
+    width: 320px;
+    height: 350px;
+}
+.border{
+    background: rgb(26, 123, 179);
+    position: absolute;
+}
+.border.top{
+   
+    top: 0;
+    left: 5px;
+  
+    width: 315px;
+    height: 5px;
+}
+.border.bottom {
+   
+    bottom: 0;
+    left: 5px;
+    width: 315px;
+    height: 5px;
+}
+.border.left {
+   
+    top: 0px;
+    left: 0;
+   
+    width: 5px;
+    height: 350px;
+}
+.border.right {
+   
+    top: 0px;
+    right: 0;
+    
+    width: 5px;
+    height: 350px;
+}
+@keyframes typing-text {
+    0%{
+    content: 'Hello Rashed|';
+    }
+    4%{
+        content: "Hello Rashe|";
+    }
+    8%{
+        content: "Hello Rash|";
+    }
+    12%{
+        content: "Hello Ras|";
+    }
+    16%{
+        content: "Hello Ra|";
+    }
+    20%{
+        content: "Hello R|";
+    }
+    24%{
+        content: "Hello |";
+    }
+    28%{
+        content: "Hello|";
+    }
+    32%{
+        content: "Hell|";
+    }
+    36%{
+        content: "Hel|";
+    }
+    40%{
+        content: "He|";
+    }
+    44%{
+        content: "H|";
+    }
+    48%{
+        content: "H|";
+    }
+    52%,
+    56%{
+        content: "He|";
+    }
+    60%{
+         content: "Hel|";
+    }
+        64% {
+            content: 'Hell|';
+        }
+    
+        68% {
+            content: "Hello|";
+        }
+    
+        72% {
+            content: "Hello |";
+        }
+    
+        76% {
+            content: "Hello R|";
+        }
+    
+        80% {
+            content: "Hello Ra|";
+        }
+    
+        84% {
+            content: "Hello Ras|";
+        }
+    
+        86% {
+            content: "Hello Rash|";
+        }
+    
+        90% {
+            content: "Hello Rashe|";
+        }
+    
+        94% {
+            content: "Hello Rashed|";
+        }
+    
+        98%,100% {
+            content: "Hello Rashed|";
+        }
+       
+        
+}
