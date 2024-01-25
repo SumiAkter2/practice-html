@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+nav ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+}
+header nav ul li {
+    list-style: none;
+}
+nav ul li a{
+    text-decoration:none ;
+    font-size: 22px;
+    color: #000;
+}
+
+.hamburger{
+    position: relative;
+}
+.hamburger input[type="checkbox"]{
+    position: absolute;
+    right: 5px;
+    z-index: 5;
+    cursor: pointer;
+
+}
