@@ -1,32 +1,126 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+/* Reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: white;
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
     text-align: start;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
-a{
+ a{
     text-decoration: none;
-    font-size: 22px;
+   
 }
-ul li{
+ul{
     list-style: none;
 }
-ul {
-    display: flex;
-    gap: 30px;
+.header{
+background: rgba(172, 172, 172, 0.713);
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    box-shadow: 0 2px 10px 0 red;
-    padding: 0 40px;
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+.nav{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(248, 248, 105, 0.824);
+}
+.menu a{
+    display: block;
+    padding: 30px 20px;
+}
+.menu a:hover{
+    background-color: rgba(253, 101, 101, 0.877);
+}
+.nav{
+    max-height: 0;
+    transition: max-height 0.7s ease-out;
+}
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .nav{
+    max-height: 100%;
+}
+@media screen and (min-width:768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        float: right;
+        width: fit-content;
+        position: relative;
+        background: transparent;
+    }
+    .menu li{
+float: left;
+    }
+    .menu li a:hover{
+        background: transparent;
+        color: rgb(244, 144, 30);
+    }
+    .hamb{
+        display: none;
+    }
 }
